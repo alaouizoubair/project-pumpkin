@@ -1,0 +1,36 @@
+/*****************PROJECT-PUMPKIN StyleSheet***************/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    font-family: 'Lato';
+}
+
+.box{
+    border:1px solid rgb(220,220,220);
+    height: 100px;
+}
+
+md-sidenav{
+    width: 500px;
+    height: 100%;
+    padding:20px;
+    background-color: rgb(226,26,60);
+}
+
+md-content{
+    height: 100%;
+    padding:20px;
+    background-color: white;
+}
+
+.mainContainer{
+    height: 100%;
+    width: 100%;
+}
