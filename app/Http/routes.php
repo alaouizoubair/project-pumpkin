@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', array("as"=>"home","uses"=>"UserController@home"));
+Route::get('/home', array("as"=>"home","uses"=>"UserController@home"));
+
+Route::post('user/create',array('as'=>'user.create','uses'=>'UserController@create'));

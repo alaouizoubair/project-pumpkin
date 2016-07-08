@@ -9,28 +9,93 @@ body {
     padding: 0;
     width: 100%;
     display: table;
-    font-family: 'Lato';
+    font-family: 'Raleway';
+}
+
+h6{
+    font-size: 0.6em;
+    font-weight: 100;
+}   
+
+input{
+    font-weight: 400;
+}
+
+.md-input:focus {
+    font-weight: 400;
 }
 
 .box{
     border:1px solid rgb(220,220,220);
-    height: 100px;
+    
 }
 
 md-sidenav{
     width: 500px;
     height: 100%;
     padding:20px;
-    background-color: rgb(226,26,60);
+    background-color: #000;
 }
 
 md-content{
     height: 100%;
     padding:20px;
-    background-color: white;
+    
 }
+
+.contentOne md-tabs{
+    border: 1px solid rgb(220,220,220);
+    box-shadow: 1px 1px 1px rgb(0,0,0);
+    height:450px;
+}
+
+.contentOne md-tab-content{
+    margin:10px;
+}
+
+.contentOne md-input-container{
+    margin:5px;
+}
+
+.right-side-nav md-content{
+    color:white;
+    background-color: #000;
+    border:1px solid rgb(40,40,40);
+    font-size: 0.8em;
+}
+
+.right-side-nav h4{
+    color:gold;
+}
+
+.contentOne p{
+    text-align: justify;
+}
+
+.right-side-nav textarea{
+    width:100%;
+    margin:0px;
+    color:blue;
+    font-size:1em;
+}
+
+
+.inscription-tab{
+    margin-top:20px;
+}
+
+.inscription-tab img{
+    height:290px;
+}
+
 
 .mainContainer{
     height: 100%;
     width: 100%;
+}
+
+.right-side-nav form{
+    width: 100%;
+    margin: 0px;
+    padding:0px;
 }
