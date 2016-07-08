@@ -55,7 +55,7 @@
 						    		</md-input-container>
 
 						    		<div layout="row" flex layout-align="center center" >
-							    		<md-button class="md-fab md-primary md-hue-2" type="submit" aria-label="Comment" >
+							    		<md-button class="md-fab md-primary md-hue-2" type="submit" aria-label="Comment" ng-click="registerUser()">
 								            <md-icon md-font-set="material-icons" > done </md-icon>
 								        </md-button>
 							        </div>
@@ -69,7 +69,7 @@
 			    	</md-tab-body>
 		    	</md-tab>
 		    </md-tabs>
-		    
+
 		</md-content>
 
 		<md-sidenav layout="column" class="right-side-nav" md-is-locked-open='true'>

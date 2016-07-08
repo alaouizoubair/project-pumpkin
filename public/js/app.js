@@ -8,6 +8,12 @@ angular.module('PumpkinApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCach
 })
 
 .controller('AppCtrl', function($scope) {
+
+	$scope.registerUser = function(e){
+		e.preventDefault();
+		alert("ok");
+	}
+
 	$scope.user = {
       title: 'Developer',
       email: 'ipsum@lorem.com',
