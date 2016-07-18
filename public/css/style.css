@@ -1,119 +1,67 @@
-/*****************PROJECT-PUMPKIN StyleSheet***************/
-
-html, body {
-    height: 100%;
+html{
+    font-family: Lato;
+    font-weight: 400;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+
+md-content.md-default-theme {
+  background-color: #eee;
+}
+
+md-card {
+  background-color: #fff;
+}
+md-card h2:first-of-type {
+  margin-top: 0;
+}
+
+md-toolbar .md-button.md-default-theme {
+  border-radius: 99%;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.md-toolbar-tools-bottom {
+  font-size: small;
+}
+.md-toolbar-tools-bottom :last-child {
+  opacity: 0.8;
+}
+
+md-toolbar:not(.md-hue-1),
+.md-fab {
+  fill: #fff;
+}
+
+md-sidenav {
+  fill: #737373;
+}
+md-sidenav ng-md-icon {
+  position: relative;
+  top: 5px;
+}
+
+.user-avatar {
+  border-radius: 99%;
+}
+
+p.description{
+    text-align: justify;
+    line-height: 120%;
+}
+
+p.toolbar{
+    text-align: center;
+    line-height: 120%;
+}
+
+p.description b{
+
+}
+
+img{
     width: 100%;
-    display: table;
-    font-family: 'Raleway';
-}
-
-h6{
-    font-size: 0.6em;
-    font-weight: 100;
-}   
-
-input{
-    font-weight: 400;
-}
-
-.md-input:focus {
-    font-weight: 400;
-}
-
-.box{
-    border:1px solid rgb(220,220,220);
-    
-}
-
-md-sidenav{
-    
-    height: 100%;
-    padding:20px;
-    background-color: #000;
-}
-
-md-content{
-    height: 100%;
-    padding:20px;
-    
-}
-
-.contentOne md-tabs{
-    border: 1px solid rgb(220,220,220);
-    box-shadow: 1px 1px 1px rgb(0,0,0);
-    height:500px;
-}
-
-.contentOne md-tab-content{
-    margin:10px;
-}
-
-.contentOne md-input-container{
     margin:5px;
-}
-
-.right-side-nav md-content{
-    color:white;
-    background-color: #000;
-    border:1px solid rgb(40,40,40);
-    font-size: 0.8em;
-}
-
-.right-side-nav h4{
-    color:gold;
-}
-
-.right-side-nav p{
-    text-align: left;
-    line-height: 25px;
-    font-size: 1.1em;
-    font-weight: 400;
-}
-
-.right-side-nav .send-link{
-    color: gold;
-    margin-left:10px;
-}
-
-
-.right-side-nav h1{
-    font-size: 2.8em;
-    font-weight: 100;
-}
-
-.inscription-tab{
-    margin-top:20px;
-}
-
-.inscription-tab img{
-    height:290px;
-}
-
-.description-tab div{
-    
-}
-
-.description-tab img{
-    width:100%;
-}
-
-
-.mainContainer{
-    height: 100%;
-    width: 100%;
-}
-
-.right-side-nav form{
-    width: 100%;
-    margin: 0px;
-    padding:0px;
-}
-
-.registration-complete{
-    display:none;
 }

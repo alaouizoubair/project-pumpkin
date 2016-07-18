@@ -1,45 +1,156 @@
 @extends('default')
 
 @section('content')
-	
-	<md-toolbar class="md-hue-2">
-      <div class="md-toolbar-tools">
-        <h2>
-          <span>LA PASSERELLE&nbsp;&nbsp;&nbsp;</span>
-        </h2>
-        <h6>(PROJECT-PUMPKIN)</h6>
-        <div flex></div>
-        <md-button class="md-icon-button" aria-label="Settings" >
-          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar class=" md-hue-2">
+        <span flex></span>
+        <div layout="column" layout-align="center center" class="md-toolbar md-toolbar-tools-bottom inset">
+          <user-avatar></user-avatar>
+          <span></span>
+        </div>
+      </md-toolbar>
+      <md-toolbar class="md-tall md-hue-2">
+        <span flex></span>
+        <div layout="column" class="md-toolbar-tools-bottom inset" layout-align="center center">
+          <div>
+			<p class="toolbar">
+          Le projet a besoin de vous pour gérer la communication, et répondre aux questions des utilisateurs. Envoyez nous un mail pour nous donner un coup de main.<br>Merci
+          </p>
+          </div>
+          <div>zoubair@alaoui.in</div>
+        </div>
+      </md-toolbar>
+      <md-subheader>Phase 1:</md-subheader>
+      <md-list>
+	      <md-item>
+	      	<md-item-content md-ink-ripple layout="row" layout-align="start center">
+	            <div class="inset">
+	              <ng-md-icon icon=""></ng-md-icon>
+	            </div>
+	            <div class="inset">Atteindre 100 utilisateurs
+	            </div>
+	          </md-item-content>
+	      </md-item>
+	      <md-divider></md-divider>
 
-	<div layout-xs="column" layout-sm="column" layout-md="row" layout-xl="row" ng-controller="AppCtrl"  class="mainContainer">
-		
-		<md-content  flex  layout="column" class="contentOne">
-		    <md-tabs class="" md-selected="data.selectedIndex" md-align-tabs="top" layout-margin>
-		    	<md-tab id="tab1">
-		    		<md-tab-label>Description</md-tab-label>
-			    	<md-tab-body>
-			    		<div class="description-tab" layout="row">
-			    			<div flex="20">
-			    				<img src="{{asset('images/educ2.png')}}" >
-			    			</div>
+	      <md-subheader>Phase 2:</md-subheader>
+	      <md-item>
+	      	<md-item-content md-ink-ripple layout="row" layout-align="start center">
+	            <div class="inset">
+	              <ng-md-icon icon=""></ng-md-icon>
+	            </div>
+	            <div class="inset">Mise en place de l'application
+	            </div>
+	          </md-item-content>
+	      </md-item>
+	      <md-divider></md-divider>
 
-			    			<div flex>
-			    				<p>
-
-			    				</p>
-			    			</div>
-			    		</div>
-			    	</md-tab-body>
-		    	</md-tab>
-		    	<md-tab id="tab2">
-		    		<md-tab-label>Inscription</md-tab-label>
-			    	<md-tab-body >
-			    		<div class="inscription-tab" layout="row">
-				    		<div flex>
+	      <md-subheader>Phase 3:</md-subheader>
+	      <md-item>
+	      	<md-item-content md-ink-ripple layout="row" layout-align="start center">
+	            <div class="inset">
+	              <ng-md-icon icon=""></ng-md-icon>
+	            </div>
+	            <div class="inset">Lancement 1/10/2016
+	            </div>
+	          </md-item-content>
+	      </md-item>
+	      <md-divider></md-divider>
+    </md-list>
+    </md-sidenav>
+    <div layout="column" class="relative" layout-fill role="main">
+      <!-- <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
+        <ng-md-icon icon="add"></ng-md-icon>
+      </md-button> -->
+      <md-toolbar ng-show="!showSearch">
+        <div class="md-toolbar-tools">
+          <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">
+            <ng-md-icon icon="menu"></ng-md-icon>
+          </md-button>
+          <h3>
+            La Passerelle
+          </h3>
+          <span flex></span>
+          <!-- <md-button aria-label="Search" ng-click="showSearch = !showSearch">
+            <ng-md-icon icon="search"></ng-md-icon>
+          </md-button>
+          <md-button aria-label="Open Settings" ng-click="showListBottomSheet($event)">
+            <ng-md-icon icon="more_vert"></ng-md-icon>
+          </md-button> -->
+        </div>
+        <md-tabs md-stretch-tabs class="md-primary" md-selected="data.selectedIndex">
+          <md-tab id="tab1" aria-controls="tab1-content">
+            DESCRIPTION
+          </md-tab>
+          <md-tab id="tab2" aria-controls="tab2-content">
+            INSCRIPTION
+          </md-tab>
+        </md-tabs>
+      </md-toolbar>
+      <md-toolbar class="md-hue-1" ng-show="showSearch">
+        <div class="md-toolbar-tools">
+          <md-button ng-click="showSearch = !showSearch" aria-label="Back">
+            <ng-md-icon icon="arrow_back"></ng-md-icon>
+          </md-button>
+          <h3 flex="10">
+            Back
+          </h3>
+          <md-input-container md-theme="input" flex>
+            <label>&nbsp;</label>
+            <input ng-model="search.who" placeholder="enter search">
+          </md-input-container>
+          <md-button aria-label="Search" ng-click="showSearch = !showSearch">
+            <ng-md-icon icon="search"></ng-md-icon>
+          </md-button>
+          <md-button aria-label="Open Settings" ng-click="showListBottomSheet($event)">
+            <ng-md-icon icon="more_vert"></ng-md-icon>
+          </md-button>
+        </div>
+       
+      </md-toolbar>
+      <md-content flex md-scroll-y>
+        <ui-view layout="column" layout-fill layout-padding>
+          <div class="inset" hide-sm></div>
+            <ng-switch on="data.selectedIndex" class="tabpanel-container">
+              <div role="tabpanel"
+                   id="tab1-content"
+                   aria-labelledby="tab1"
+                   ng-switch-when="0"
+                   md-swipe-left="next()"
+                   md-swipe-right="previous()"
+                   layout="row" layout-align="center center">
+                  <md-card flex-gt-sm="90" flex-gt-md="80">
+                    <md-card-content >
+                      <h2>Description</h2>
+	                      <div layout="row" layout-sm="column" layout-align="center center">
+		                      <div flex="65" flex-sm="100">
+			                      <p class="description">
+			                      L'<b>information</b> a toujours été la frontière entre le savoir et l'ignorance, entre la vie et la survie. Aujourd'hui, si l'<b>éducation</b> est la voie vers l'information, l'<b>orientation</b> serait la boussole. Pour cela, <b>La Passerelle</b> à un seul objectif: Orienter les jeunes <b>talents</b> <i>Marocains</i>  dans leur parcours scolaire. Pour atteindre cet objectif, votre <b>expérience</b> proffessionel est importante, et nous vous encourageons à la partager.
+			                      <br><br>
+									En participant, vous serez invité à répondre à un seul email par semaine au maximum. Dans cet email, un <b>étudiant</b> intéressé, séduit, passioné par votre domaine vous demandera quel était votre <b>parcours</b> scolaire et professionel, ainsi qu'une petite description de votre activité.
+									<br>
+									Ces informations étant négligeable, voir même sans importance pour la plupart d'entre nous, risquent de jouer un rôle crucial dans l'orientation d'innombrable jeunes pour découvrir de nouveau horizon et saisir des <b>opportunités</b> qui semblent à ce jour improbables.
+									</p>
+		                        </div>
+		                      <div flex>
+		                      	<img src="{{asset('images/educ2.png')}}" >
+		                      </div>
+	                      </div>
+                    </md-card-content>
+                  </md-card>
+              </div>
+              <div role="tabpanel"
+                   id="tab2-content"
+                   aria-labelledby="tab2"
+                   ng-switch-when="1"
+                   md-swipe-left="next()"
+                   md-swipe-right="previous()" 
+                   layout="row" layout-align="center center">
+                  <md-card flex-gt-sm="90" flex-gt-md="80">
+                    <md-card-content>
+                      <h2>Inscription</h2>
+                      <div layout="row" layout-sm="column">
+				    		<div flex="60" flex-sm="100">
 				    			<form class="registration-form"  layout="column"  layout-align="center stretch" >
 
 				    				{!! csrf_field() !!}
@@ -66,63 +177,29 @@
 
 						    		<div layout="row" flex layout-align="center center" >
 							    		<md-button class="md-fab md-primary md-hue-2" type="submit" aria-label="Comment" ng-click="registerUser($event)">
-								            <md-icon md-font-set="material-icons" > done </md-icon>
+								            <ng-md-icon icon="done"></ng-md-icon>
 								        </md-button>
 							        </div>
 						        </form>
 
-						        <div flex class="registration-complete">
+						        <div flex hide class="registration-complete">
 						        	<h1>Merci de votre participation
 						        </div>
 
 				    		</div>
-				    		<div flex class="graphic-inscription" layout="row" layout-align="center center">
+				    		<span flex></span>
+				    		<div flex="30" class="graphic-inscription" layout="row" layout-align="center center">
 				    			<img src="{{asset('images/mrc2.png')}}" >
 				    		</div>
 			    		</div>
-			    	</md-tab-body>
-		    	</md-tab>
-		    </md-tabs>
-
-		</md-content>
-
-		<md-sidenav layout="column" class="right-side-nav" flex="25" md-is-locked-open='true'>
-		
-			<md-content layout-margin layout="column" layout-align="start center" md-theme="docs-dark">
-					
-				<h4><span>PROJECT PUMPKIN</span></h4>
-				<h1>100 inscriptions</h1>
-				<p >
-					L'objectif que nous nous sommes mis est d'atteindre 100 inscriptions avant de développer l'application web. Cette phase peut durer entre un et deux mois. Durant le developpement, certains parmi vous seront	contacter via email pour tester et évaluer l'application pour donner des propositions et des pistes d'améliorations. 
-					<br><br>
-					Le projet est mis à votre disposition. Vous pouvez consulter le code source sur github
-					<a href="https://github.com/alaouizoubair/project-pumpkin" class="md-caption" target="_blank"> 
-						<md-icon style="color:gold;" md-font-set="material-icons" > cloud </md-icon>
-					</a>.
-					<br><br>
-					Le nom du projet reste le votre à choisir. Envoyez moi vos propositions dans un premier lieu. 
-					Je préparerai ensuite un vote pour choisir le meilleur nom.
-
-
-				</p>
-				<br><br>
-				<form method="POST" action="{{route('user.create')}}" layout="row" layout-align="center center"  >
-					<md-input-container  flex="80">
-			    		<label>www.exemple.com</label>
-			    		<input nam="sample" ng-model="user.suggestion" />
-		    		</md-input-container>
-
-		    		<a ng-click="sendSuggestion()" href="#">
-		    			<md-icon md-font-set="material-icons" class="send-link" flex="10"> send </md-icon>
-		    		</a>
-		    		
-	    		</form>
-			            
-	
-			</md-content>
-			
-		</md-sidenav>
-	</div>
-	
-
+                    </md-card-content>
+                  </md-card>
+              </div>
+              
+          </ng-switch>
+          
+        </ui-view>
+      </md-content>
+    </div>
+    
 @endsection
