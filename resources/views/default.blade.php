@@ -3,8 +3,9 @@
     <head>
         <title>La Passerelle</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:400" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:100,400" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="{{asset('js/jquery.js')}}"></script>
         <link rel="stylesheet" href="{{asset('bower/angular-material/angular-material.min.css')}}">
 
         <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css">

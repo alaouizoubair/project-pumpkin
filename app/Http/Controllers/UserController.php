@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use App\Suggestion;
 
 
 class UserController extends Controller
@@ -32,7 +33,8 @@ class UserController extends Controller
     	$this->validate($request,[
     		'email' => 'required|max:255|email|unique:users',
     		'first_name' => 'required|min:2',
-    		'last_name' => 'required|min:2'
+    		'last_name' => 'required|min:2',
+            'skill' => 'required|min:2',
     	]);
 
     	$user = new User;
@@ -42,9 +44,22 @@ class UserController extends Controller
     	$user->skill = $request->skill;
     	$user->email = $request->email;
 
-    	$user->save();
+    	//$user->save();
 
     	return 1;
+    }
+
+    /*
+    * Save suggestion to database
+    *
+    *
+    */
+    public function suggestion($name){
+        $suggestion = new Suggestion;
+        $suggestion->name = $name;
+        //$suggestion->save();
+
+        return 1;
     }
 
 }

@@ -31,7 +31,7 @@ input{
 }
 
 md-sidenav{
-    width: 500px;
+    
     height: 100%;
     padding:20px;
     background-color: #000;
@@ -46,7 +46,7 @@ md-content{
 .contentOne md-tabs{
     border: 1px solid rgb(220,220,220);
     box-shadow: 1px 1px 1px rgb(0,0,0);
-    height:450px;
+    height:500px;
 }
 
 .contentOne md-tab-content{
@@ -68,17 +68,23 @@ md-content{
     color:gold;
 }
 
-.contentOne p{
-    text-align: justify;
+.right-side-nav p{
+    text-align: left;
+    line-height: 25px;
+    font-size: 1.1em;
+    font-weight: 400;
 }
 
-.right-side-nav textarea{
-    width:100%;
-    margin:0px;
-    color:blue;
-    font-size:1em;
+.right-side-nav .send-link{
+    color: gold;
+    margin-left:10px;
 }
 
+
+.right-side-nav h1{
+    font-size: 2.8em;
+    font-weight: 100;
+}
 
 .inscription-tab{
     margin-top:20px;
@@ -86,6 +92,14 @@ md-content{
 
 .inscription-tab img{
     height:290px;
+}
+
+.description-tab div{
+    
+}
+
+.description-tab img{
+    width:100%;
 }
 
 
@@ -98,4 +112,8 @@ md-content{
     width: 100%;
     margin: 0px;
     padding:0px;
+}
+
+.registration-complete{
+    display:none;
 }
