@@ -16,7 +16,8 @@ class UserController extends Controller
 	*
 	*/
 	public function home(){
-		return view('home');
+        $nbInscriptions = User::count();
+		return view('home',compact('nbInscriptions'));
 	}
 
 
@@ -44,7 +45,7 @@ class UserController extends Controller
     	$user->skill = $request->skill;
     	$user->email = $request->email;
 
-    	//$user->save();
+    	$user->save();
 
     	return 1;
     }

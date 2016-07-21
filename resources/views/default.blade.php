@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="StarterApp">
   <head>
-  <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:100,400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:100,400" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css">
+    <script src="{{asset('js/jquery.js')}}"></script>
   </head>
   <body layout="row" ng-controller="AppCtrl" ng-cloak="">
 
